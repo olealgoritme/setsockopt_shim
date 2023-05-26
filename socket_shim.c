@@ -1,16 +1,8 @@
 #define _GNU_SOURCE
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include <dlfcn.h>
-#include <string.h>
-#include <errno.h>
-#include <sys/types.h>
 #include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <netdb.h>
 
 int (*shim_socket) (int domain, int type, int protocol) = NULL;
 
